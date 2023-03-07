@@ -1,0 +1,61 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+@namespace html url("http://www.w3.org/1999/xhtml");
+
+#sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"] > #sidebar-header{
+  display: none;
+}
+
+html#main-window
+  body
+  hbox#browser
+  vbox#sidebar-box.chromeclass-extrachrome
+  box#sidebar-header {
+  display: none;
+}
+
+#tabbrowser-tabs {
+visibility: collapse !important;
+min-height: 0 !important;
+}
+
+tab{
+display:none!important;
+}
+
+/* Adding empty space for buttons */
+#nav-bar {
+	margin-right:140px;
+}
+
+/* 15px for dragging whole window by mouse*/
+#titlebar {
+	appearance: none !important;
+	height: 5px;
+}
+
+/* Fix for main menu calling by Alt button */
+#titlebar > #toolbar-menubar {
+	margin-top: 10px;
+}
+
+/* Move minimize/restore/close buttons to empty space */
+#TabsToolbar > .titlebar-buttonbox-container {
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: 1px;
+}
+
+
+
+#main-window #TabsToolbar {
+  height: 29px !important;
+  overflow: hidden;
+  transition: height .3s .3s !important;
+}
+#main-window[titlepreface*="XXX"] #TabsToolbar {
+  height: 0 !important;
+}
+#main-window[titlepreface*="XXX"] #tabbrowser-tabs {
+  z-index: 0 !important;
+}
