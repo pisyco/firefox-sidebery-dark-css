@@ -1,6 +1,9 @@
 # firefox-sidebery-dark-css
 this will enable a dark firefox theme for both the browser itself as well as the sidebery addon.
 
+![screenshot](https://user-images.githubusercontent.com/107621826/223304582-bc9f91ed-89bd-4b66-a6b8-412fef3b617f.png)
+
+
 sidebery is an firefox addon that move tabs to the side of the browser window
 
 how to install
